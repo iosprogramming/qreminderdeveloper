@@ -1,0 +1,37 @@
+/* Empty. Add your own CSS if you like */
+/*Fondo de la actividad*/
+.list:last-child {
+    background: url(../img/background.png);
+}
+.item {
+	background-color:#000;
+	opacity: 0.8;
+	margin-left:80px;
+	border-top: 0px;
+	border-bottom: 5px;
+	border-left: 0px;
+	border-right: 0px;
+}
+.item p{
+	color: #FFF;
+}
+.list{
+}
+.bar.bar-stable{
+	background: #317300;
+}
+.tabs{
+	background: #317300;
+}
+.bar.bar-stable .title {
+	color: #FFF;
+	border-bottom: 0px solid #FFF;
+}
+.tab-item .icon, .tab-title{
+	color: #BABABA;
+	background: #317300;
+}
+.tab-item, .icon{
+	background: #317300;
+}
+
