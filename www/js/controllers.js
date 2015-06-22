@@ -26,7 +26,7 @@ angular.module('starter.controllers', [])
   $scope.items = [];
   $scope.addItems = function() {
     for (var i = currentStart; i < currentStart+20; i++) {
-      $scope.items.push("Actividad " + i)
+      $scope.items.push("18:" + i+"0")
     }
 
     currentStart += 20
