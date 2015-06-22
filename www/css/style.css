@@ -1,21 +1,30 @@
 /* Empty. Add your own CSS if you like */
 /*Fondo de la actividad*/
+.scroll-content{
+  background: url(../img/background.png);
+}
 .list:last-child {
-    background: url(../img/background.png);
+    background: url(../img/background.png);   
 }
 .item {
-	background-color:#000;
-	opacity: 0.8;
-	margin-left:80px;
-	border-top: 0px;
-	border-bottom: 5px;
-	border-left: 0px;
-	border-right: 0px;
+	border: 0px; 
+	background-color: transparent;
 }
-.item p{
+.item>a{
+	background-color:#317300;
+	opacity: 0.77%;
 	color: #FFF;
+	margin-left:20%;
+	border-top: 1%;
+	border-bottom: 1%;
+	border-left: 1%;
+	border-right: 1%;
+	-webkit-box-shadow: -2px 1px 28px 0px rgba(0,0,0,0.75);
+	-moz-box-shadow: -2px 1px 28px 0px rgba(0,0,0,0.75);
+	box-shadow: -2px 1px 28px 0px rgba(0,0,0,0.75);
 }
-.list{
+a.item:hover, a.item:focus {
+  color: #000;
 }
 .bar.bar-stable{
 	background: #317300;
@@ -34,4 +43,3 @@
 .tab-item, .icon{
 	background: #317300;
 }
-
