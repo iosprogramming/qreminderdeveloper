@@ -1,0 +1,52 @@
+{
+  "name": "ionic-datepicker",
+  "version": "1.0.0",
+  "authors": [
+    "rajeshwarpatlolla <rajeshwar.patlolla@gmail.com>",
+    "dionesandrade <diones.andrade@gmail.com>"
+  ],
+  "description": "A date picker component for ionic framework applications",
+  "main": [
+    "./dist/templates.js",
+    "./dist/ionic-datepicker.js",
+    "./dist/style.css"
+  ],
+  "keywords": [
+    "ionic-datepicker",
+    "ionic",
+    "datepicker",
+    "datepicker for ionic",
+    "datepicker for ionic framework"
+  ],
+  "license": "MIT",
+  "homepage": "https://github.com/rajeshwarpatlolla",
+  "ignore": [
+    "**/.*",
+    "node_modules",
+    "bower_components",
+    "test",
+    "tests"
+  ],
+  "dependencies": {
+    "ionic": "~1.0.0"
+  },
+  "devDependencies": {
+    "gulp": "~3.8.11",
+    "gulp-clean": "^0.3.1",
+    "gulp-concat": "~2.4.3",
+    "gulp-minify-css": "~0.4.5",
+    "gulp-minify-html": "~0.1.8",
+    "gulp-ng-html2js": "~0.1.8",
+    "gulp-uglify": "~1.1.0"
+  },
+  "_release": "1.0.0",
+  "_resolution": {
+    "type": "version",
+    "tag": "v1.0.0",
+    "commit": "dcc74ea4cd2828a79749757b56d71d8e25b1f336"
+  },
+  "_source": "git://github.com/Diones/ionic-datepicker.git",
+  "_target": "~1.0.0",
+  "_originalSource": "ionic-datepicker-dfandrade",
+  "_direct": true
+}

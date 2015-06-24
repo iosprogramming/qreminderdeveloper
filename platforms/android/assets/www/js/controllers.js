@@ -1,4 +1,4 @@
-angular.module('starter.controllers', [])
+angular.module('starter.controllers', ['pickadate'])
 //Definicion de controler Add
 .controller('AddCtrl', function($scope) {})
 
@@ -17,10 +17,6 @@ angular.module('starter.controllers', [])
   }
 })
 
-.controller('ChatDetailCtrl', function($scope, $stateParams, Chats) {
-  $scope.chat = Chats.get($stateParams.chatId);
-})
-
 .controller('DateCtrl', function($scope) {
   var currentStart = 0;
   $scope.items = [];
@@ -34,4 +30,26 @@ angular.module('starter.controllers', [])
 
   $scope.addItems()
 
+})
+
+.controller('DatepickerCtrl', function($scope,$ionicModal) {
+    
+    $ionicModal.fromTemplateUrl('templates/datemodal.html', 
+        function(modal) {
+            $scope.datemodal = modal;
+        },
+        {
+        // Use our scope for the scope of the modal to keep it simple
+        scope: $scope, 
+        // The animation we want to use for the modal entrance
+        animation: 'slide-in-up'
+        }
+    );
+    $scope.opendateModal = function() {
+      $scope.datemodal.show();
+    };
+    $scope.closedateModal = function(modal) {
+      $scope.datemodal.hide();
+      $scope.datepicker = modal;
+    };
 });
