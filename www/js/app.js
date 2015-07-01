@@ -5,7 +5,7 @@
 // the 2nd parameter is an array of 'requires'
 // 'starter.services' is found in services.js
 // 'starter.controllers' is found in controllers.js
-angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
+angular.module('starter', ['ionic', 'starter.controllers', 'starter.services', 'ionic-timepicker','pickadate','ionic-datepicker'])
 
 .run(function($ionicPlatform) {
   $ionicPlatform.ready(function() {
@@ -20,6 +20,7 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
     }
   });
 })
+
 
 .config(function($stateProvider, $urlRouterProvider, $ionicConfigProvider) { 
       $ionicConfigProvider.tabs.position('bottom'); 
@@ -67,10 +68,32 @@ angular.module('starter', ['ionic', 'starter.controllers', 'starter.services'])
         controller: 'DateCtrl'
       }
     }
+  })
+  
+  .state('tab.modal', {
+    url: '/modal',
+    views: {
+      'tab-modal': {
+        templateUrl: 'templates/my-modal.html',
+        controller: 'MyController'
+      }
+    }
   });
 
 
   // if none of the above states are matched, use this as the fallback
   $urlRouterProvider.otherwise('/tab/date');
 
+})
+
+.directive('mobiDateTimePicker', function() {
+  return {
+    restrict: 'A',
+    link: function($scope, element, attrs) {
+      return $(element).mobiscroll().datetime({
+        theme: 'ios7',
+        display: 'bottom'
+      });
+    }
+  };
 });

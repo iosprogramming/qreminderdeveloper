@@ -1,10 +1,14 @@
 /* Empty. Add your own CSS if you like */
 /*Fondo de la actividad*/
+
 .scroll-content{
-  background: url(../img/background.png);
+  background: url(../img/Gif-animado-Acuario-06.gif)no-repeat; 
+  -webkit-background-size: cover;
+  -moz-background-size: cover;
+  -o-background-size: cover;
+  background-size: cover;
+  background-size: 100% 100%;
 }
-.list:last-child {     
-    background-repeat: repeat-x;}
 .item {
 	border: 0px; 
 	background-color: transparent;
@@ -25,20 +29,33 @@
 a.item:hover, a.item:focus {
   color: #000;
 }
-.bar.bar-stable{
+.bar.bar-stable, .tabs{
 	background: #317300;
+	border-top: #317300;
+	border-left: #317300;
+	border-right:#317300;
+	border-bottom: #317300;
 }
-.tab-nav,.tabs{
+.tab-nav{
+	background: transparent;
+}
+.tabs{
 	background: #317300;
 }
 .bar.bar-stable .title {
 	color: #FFF;
 	border-bottom: 0px solid #FFF;
 }
-.tab-item .icon, .tab-title{
+.tab-item, .icon, .tab-title{
 	color: #BABABA;
 	background: #317300;
 }
-.tab-item, .icon{
+.view-container{
 	background: #317300;
+}
+.button.button-positive{
+	background: #317300;	
+}
+.bar,.bar-stable, .tabs{
+  background: #317300;
 }
