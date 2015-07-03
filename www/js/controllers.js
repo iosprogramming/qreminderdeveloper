@@ -21,7 +21,7 @@ angular.module('starter.controllers', [])
   var currentStart = 0;
   $scope.items = [];
   $scope.addItems = function() {
-    for (var i = currentStart; i < currentStart+20; i++) {
+    for (var i = currentStart; i < currentStart+5; i++) {
       //$scope.items.push("Tienes una actividad") 
       $scope.items.push({ description: "18:" + i +"0"});
     }
@@ -79,7 +79,17 @@ angular.module('starter.controllers', [])
   $scope.$on('modal.removed', function() {
     // Execute action
   });
+})
+
+.controller('CurrentDate', function($scope, $rootScope, starterservices) {
+    $rootScope.calladdCurrentDate = function(currObj){
+        starter.services.addCurrentDate(currObj);
+    };
+})
+
+.controller('CartController', function($scope, $rootScope, starterservices) {
+    $rootScope.currentDate = starter.services.addCurrentDate();
 });
-;
+
 
 

@@ -1,8 +1,13 @@
 /* Empty. Add your own CSS if you like */
 /*Fondo de la actividad*/
 
-.scroll-content{
-  background: url(../img/Gif-animado-Acuario-06.gif)no-repeat; 
+@font-face {
+font-family:customfont; /* Edit this line */
+src: url(./font/Avenir.ttf) format("truetype");
+}
+
+.scroll-content, .view-container{
+  background: url(../img/Comp1_4.gif)no-repeat; 
   -webkit-background-size: cover;
   -moz-background-size: cover;
   -o-background-size: cover;
@@ -29,33 +34,72 @@
 a.item:hover, a.item:focus {
   color: #000;
 }
-.bar.bar-stable, .tabs{
+.tabs{
 	background: #317300;
-	border-top: #317300;
-	border-left: #317300;
-	border-right:#317300;
-	border-bottom: #317300;
+	border-top: #000;
+	border-left: #000;
+	border-right:#000;
+	border-bottom: #000;
+}
+.bar.bar-stable{
+	background: transparent;
 }
 .tab-nav{
 	background: transparent;
 }
 .tabs{
-	background: #317300;
+	background: #317300;																																																
 }
-.bar.bar-stable .title {
+.bar.bar-stable .title {																															 
 	color: #FFF;
-	border-bottom: 0px solid #FFF;
+	border-bottom: 1px solid #FFF;
+	margin-left: 5%;
+	margin-right: 0%;
 }
 .tab-item, .icon, .tab-title{
 	color: #BABABA;
 	background: #317300;
-}
-.view-container{
-	background: #317300;
+	border-bottom: 0px;																																																																																																																																																																																																																													
 }
 .button.button-positive{
 	background: #317300;	
 }
-.bar,.bar-stable, .tabs{
-  background: #317300;
+
+.modal{
+	max-width: 100%;
+	max-height: 100%;
+	min-height: 100%;
+	min-width: 100%;
+	margin-left:0%;
+	margin-top: 10%;
+	margin-bottom: 0%;
+	background: #000;
+	opacity: 0.5;
 }
+.play-modal>.bar,.bar-header,.disable-user-behavior{
+	background: transparent;	
+	color: #FFF;
+}
+
+.play-modal>.scroll-content{
+	background: transparent;	
+	color: #FFF;
+}
+.play-modal>.icon,.ion-play, .ion-pause{
+	font-size: 700%;
+	background: transparent;
+	margin-left: 40%;
+}
+.play-modal>.bar,h1{
+	color: #FFF;
+	font-size: 200%;
+	margin-left: 35%;
+    font-family: customfont !important;
+}
+
+title, .title-center, .header-item>.icon,.ion-gear-a{
+	background: transparent;
+}
+
+
+

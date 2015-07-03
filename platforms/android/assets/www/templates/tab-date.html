@@ -1,9 +1,10 @@
-<ionic-datepicker idate="currentDate">
-    <ion-view view-title="{{ currentDate | date:'dd - MMMM - yyyy'}}">
+<ionic-datepicker idate="currentDate">    
+    <ion-view view-title="{{ currentDate | date:'dd - MMMM - yyyy'}} 
+    <a href='#' class='item-icon-right' ng-click='openModal()'><i class='icon ion-gear-a'></i></a>">
         <ion-content>
-            <ion-list>
+            <ion-list><br/><br/>
                 <ion-item ng-repeat="item in items track by $index">
-        	        <a href="#" class="item item-icon-right">
+        	        <a href='#' class='item item-icon-right' ng-controller='MyController' ng-click='openModal()'>
         	           <i class="icon ion-volume-high"></i>	
                         {{item.description}}
         	        </a>
@@ -12,3 +13,8 @@
         </ion-content>
     </ion-view>
 </ionic-datepicker> 
+
+
+
+
+

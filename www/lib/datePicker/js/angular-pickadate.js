@@ -51,26 +51,27 @@
           disabledDates: '='
         },
         template:
-          '<div class="pickadate">' +
+
+          '<div class="pickadate" on-drag-right="changeMonth(1)" on-drag-left="changeMonth(-1)" >' +
             '<div class="pickadate-header">' +
               '<div class="pickadate-controls">' +
-                '<a href="" class="pickadate-prev" ng-click="changeMonth(-1)" ng-show="allowPrevMonth">Anterior</a>' +
-                '<a href="" class="pickadate-next" ng-click="changeMonth(1)" ng-show="allowNextMonth">Siguiente</a>' +
+                '<a href="" class="pickadate-prev" ng-click="changeMonth(-1)" ng-show="allowPrevMonth"><</a>' +
+                '<a href="" class="pickadate-next" ng-click="changeMonth(1)" ng-show="allowNextMonth">></a>' +
               '</div>'+
               '<h3 class="pickadate-centered-heading">' +
                 '{{currentDate | date:"MMMM yyyy"}}' +
               '</h3>' +
             '</div>' +
-            '<div class="pickadate-body">' +
+            '<div class="pickadate-body" on-drag-right="changeMonth(1)">' +
               '<div class="pickadate-main">' +
-                '<ul class="pickadate-cell">' +
+                '<ul class="pickadate-cell">' + 
                   '<li class="pickadate-head" ng-repeat="dayName in dayNames">' +
                     '{{dayName}}' +
                   '</li>' +
                 '</ul>' +
                 '<ul class="pickadate-cell">' +
-                  '<li ng-repeat="d in dates" ng-click="setDate(d)" class="{{d.className}}" ng-class="{\'pickadate-active\': date == d.date}">' +
-                    '{{d.date | date:"d"}}' +
+                  '<li ng-repeat="d in dates" ng-click="setDate(d)" class="{{d.className}}" ng-class="{\'pickadate-active\': date == d.date}"><a ng-click="clickDay(addcurrentDate)" href="#/tab/date">' +
+                    '{{d.date | date:"d"}}' + '</a>'+
                   '</li>' +
                 '</ul>' +
               '</div>' +
@@ -125,8 +126,9 @@
                 className += ' pickadate-today';
               }
 
+
               dates.push({date: date, className: className});
-            }
+            }                                                                                                                                             
 
             scope.dates = dates;
           };
@@ -146,6 +148,24 @@
             scope.render(currentDate);
           };
 
+          scope.clickDay = function (date){
+            
+            $rootScope.currenDate = starterservices.addCurrentDate();
+            alert('hola');
+            alert(JSON.stringify(currenDate));
+            alert(JSON.stringify(date));
+
+
+            $rootScope.addCurrentDate = function(date){
+                alert(JSON.stringify(date));
+                $rootScope.currenDate = starterservices.addCurrentDate();
+                alert('hola');
+                alert(JSON.stringify(currenDate));
+                alert(JSON.stringify(date));
+            };
+            alert(JSON.stringify(currentDate));
+            alert(JSON.stringify(date));
+          }
           scope.changeMonth = function (offset) {
             // If the current date is January 31th, setting the month to date.getMonth() + 1
             // sets the date to March the 3rd, since the date object adds 30 days to the current

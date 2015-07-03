@@ -1,9 +1,10 @@
 <ionic-datepicker idate="currentDate">
-	<ion-view view-title="{{ currentDate | date:'dd - MMMM - yyyy'}}">
+	<ion-view view-title="{{ currentDate | date:'dd - MMMM - yyyy'}} 
+    <a href='#' class='item-icon-right' ng-click='openModal()'><i class='icon ion-gear-a'></i></a>">
   		<ion-content has-header="true">
     		<div class="padding">
       			<div pickadate ng-model="myDate"></div>
-    		</div
+    		</div>
   		</ion-content>
  	</ion-view>
 </ionic-datepicker>

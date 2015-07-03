@@ -37,12 +37,12 @@
     <splash density="port-xhdpi" src="resources/android/splash/drawable-port-xhdpi-screen.png" />
     <splash density="port-xxhdpi" src="resources/android/splash/drawable-port-xxhdpi-screen.png" />
     <splash density="port-xxxhdpi" src="resources/android/splash/drawable-port-xxxhdpi-screen.png" />
-    <name>calendar3</name>
+    <name>QReminder</name>
     <description>
-        An Ionic Framework and Cordova project.
+        An Irnic Framework and Cordova project.
     </description>
-    <author email="hi@ionicframework" href="http://ionicframework.com/">
-      Ionic Framework Team
+    <author email="pgodoyrobles@gmail.com" href="http://www.newppie.com.ar">
+      Newppie Software Solution
     </author>
     <content src="index.html" />
     <access origin="*" />
